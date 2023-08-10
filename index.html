@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+  
+</head>
+<body class="bg-transparent" style=" color: rgba(43, 90, 130, 0.871);">
+  <div class="container mt-4" style="background-color: rgb(179, 216, 216);">
+    <h1 class="mb-4 text-center text-decoration-underline">Resume Builder</h1>
+    
+    <form style="box-shadow: 20px 20px 20px 20px rgb(57, 84, 108); border-radius: 4px;">
+      <div class="form-group fw-bold mb-3">
+        <label for="fullName">Full Name</label>
+        <input type="text" class="form-control" id="fullName" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group fw-bold mb-3">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your Email" required>
+      </div>
+
+      <!-- Work Experience Section -->
+      <div class="form-group fw-bold mb-3">
+        <label for="workExperience">Work Experience</label>
+        <textarea class="form-control" id="workExperience" rows="5" placeholder="Work Experience"></textarea>
+      </div>
+
+
+      <!-- Education Section -->
+      <div class="form-group fw-bold mb-3">
+        <label for="education">Education</label>
+        <textarea class="form-control" id="education" rows="5" placeholder="Qualification" required></textarea>
+      </div>
+
+
+
+      <!-- Skills Section -->
+      <div class="form-group fw-bold mb-3">
+        <label for="skills">Skills</label>
+        <textarea class="form-control" id="skills" rows="5" placeholder="Skills" required></textarea>
+      </div>
+
+      <!-- Projects Section -->
+      <div class="form-group fw-bold mb-3">
+        <label for="projects">Projects</label>
+        <textarea class="form-control" id="projects" rows="5" placeholder="Project Works" required></textarea>
+      </div>
+
+      <!-- Languages Section -->
+      <div class="form-group fw-bold mb-3">
+        <label for="languages">Languages</label>
+        <textarea class="form-control" id="languages" rows="5" placeholder="Languages" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Create Resume</button>
+    </form>
+    <div id="output" class="mt-4"></div>
+
+    <button type="button" id="downloadResumeBtn" class="btn btn-success mt-3 w-100" >Download Resume</button>
+
+     <!-- Hidden input to store resume content for PDF generation -->
+     <input type="hidden" id="resumeContent">
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
